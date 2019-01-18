@@ -1,6 +1,14 @@
 # Storybook
 > UX, Design, and FED - working together!
 
+
+## Run it locally
+
+1. __`cd templates`__
+
+1. __`docker-compose up`__
+
+
 ## Getting Started
 
 1. "I'm on the [UX team](#ux-team)!"

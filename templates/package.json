@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "storybook": "start-storybook -s ../assets/dist -p 6006",
-    "build-storybook": "build-storybook"
+    "dev": "node index.js",
+    "build": "build-storybook",
+    "docker": "npm install && npm run dev"
   },
   "author": "Ryan Haskell-Glatz",
   "engines": {

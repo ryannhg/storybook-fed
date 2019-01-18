@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "gulp",
-    "dev": "gulp dev"
+    "dev": "gulp dev",
+    "docker": "npm install && npm run dev"
   },
   "engines": {
     "node": ">=8.15.0",

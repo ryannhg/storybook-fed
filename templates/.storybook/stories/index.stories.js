@@ -6,7 +6,16 @@ storiesOf('Demo', module)
   .addDecorator(withOptions({
     addonPanelInRight: true
   }))
-  .add('Heading', () => '<h1>Hello World!</h1>')
+  .add('Heading', () => `
+    <div id="app">
+      <div inline-template is="example">
+        <div>
+          <p v-text="message"></p>
+          <input v-model="message" />
+        </div>
+      </div>
+    </div>
+  `)
   .add('Button', () => {
     const button = document.createElement('button')
     button.type = 'button'
