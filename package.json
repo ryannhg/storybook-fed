@@ -1,0 +1,11 @@
+{
+  "name": "storybook-fed",
+  "version": "1.0.0",
+  "description": "UX, Design, and FED working together.",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo \"WIP\""
+  },
+  "author": "Ryan Haskell-Glatz",
+  "license": "ISC"
+}
