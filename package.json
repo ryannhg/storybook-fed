@@ -6,6 +6,10 @@
   "scripts": {
     "start": "echo \"WIP\""
   },
+  "engines": {
+    "node": ">=8.15.0",
+    "npm": ">=6.4.1"
+  },
   "author": "Ryan Haskell-Glatz",
   "license": "ISC"
 }

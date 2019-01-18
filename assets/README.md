@@ -12,12 +12,8 @@
 
 ### Building
 
-1. `gulp styles`
+1. `npm run build`
 
 ### Watching
 
-1. `gulp styles:watch`
-
-### Minifying
-
-1. `gulp styles:release`
+1. `npm run dev`
