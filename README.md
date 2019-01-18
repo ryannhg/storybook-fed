@@ -43,7 +43,7 @@ If you're on the __Design Team__, we need your awesome designs to build things o
 
 __Before:__
 
-```md
+```markdown
 # Buttons
 > I love clicking things!
 
