@@ -1,8 +1,5 @@
 # assets
-> the stuff that the Sitecore devs will need
-
-# styles
-> where all the sass be!
+> the stuff that the backend devs will need
 
 ```bash
 |- assets/
