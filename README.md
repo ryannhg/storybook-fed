@@ -118,12 +118,12 @@ All the assets you need are kept in the `assets` folder.
 To build that stuff just run:
 
 ```
+cd assets
 npm install
-
-npm run build:prod
+npm run build
 ```
 
-And your assets will be generated for you!
+And your assets will be generated for you in a folder called `dist`!
 
 #### HTML
 
