@@ -1,4 +1,7 @@
-import { configure } from '@storybook/vue'
+import { configure, addDecorator } from '@storybook/vue'
+import { withNotes } from '@storybook/addon-notes'
+
+addDecorator(withNotes)
 
 function loadStories() {
   // You can require as many stories as you need.

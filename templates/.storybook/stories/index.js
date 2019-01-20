@@ -19,6 +19,8 @@ const init = ({ label, context }) => {
     .keys()
     .forEach(key => {
       const componentLabel = key.split('.')[1].slice(1)
+
+      // Load .vue file
       const { default: component } = 
         label === 'Components'
           ? require(`../../components/${componentLabel}.vue`)
@@ -27,7 +29,28 @@ const init = ({ label, context }) => {
             : label === 'Pages'
               ? require(`../../pages/${componentLabel}.vue`)
               : {}
-      stories.add(componentLabel, _ => component)
+
+      // Load .md file, if it exists
+      let md
+      try {
+        md =
+          label === 'Components'
+            ? require(`../../components/${componentLabel}.md`)
+            : label === 'Layouts'
+              ? require(`../../layouts/${componentLabel}.md`)
+              : label === 'Pages'
+                ? require(`../../pages/${componentLabel}.md`)
+                : {}
+        md = md.slice('module.exports = "'.length, md.length - '";'.length).split('\\n').join('')
+      } catch (e) {}
+
+
+      stories.add(
+        componentLabel,
+        _ => component, {
+        notes: { markdown: md || '# ' + componentLabel + '\nNo notes found.' },
+      })
+
     })
 }
 

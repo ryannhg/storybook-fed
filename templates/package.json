@@ -13,10 +13,14 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@storybook/addon-notes": "^4.1.7",
     "@storybook/vue": "^4.1.7",
     "babel-loader": "^8.0.5",
     "babel-preset-vue": "^2.0.2",
     "css-loader": "^2.1.0",
+    "html-loader": "^0.5.5",
+    "markdown-loader": "^5.0.0",
+    "marked": "^0.6.0",
     "vue-loader": "^15.5.1",
     "vue-template-compiler": "^2.5.22"
   },
