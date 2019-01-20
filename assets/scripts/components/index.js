@@ -1,1 +1,3 @@
-require('./Example')
+module.exports = (Vue) => {
+  require('./Example')(Vue)
+}
