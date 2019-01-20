@@ -1,0 +1,18 @@
+.hero {
+  background: #333;
+  color: white;
+  padding: 6rem 2rem;
+  &__controls {
+    margin-top: 24px;
+  }
+  &__title {
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  &__subtitle {
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 8px;
+  }
+}

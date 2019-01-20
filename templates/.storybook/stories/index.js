@@ -1,5 +1,8 @@
 import { storiesOf } from '@storybook/vue'
 import Vue from 'vue'
+import { withKnobsOptions } from '@storybook/addon-knobs'
+import withFigmaUrl from 'storybook-addon-figma'
+import centered from '@storybook/addon-centered'
 
 Vue.use(require('../../scripts/main.js').default)
 
@@ -15,6 +18,17 @@ const contexts = {
 
 const init = ({ label, context }) => {
   const stories = storiesOf(label, module)
+    .addDecorator(withKnobsOptions({
+      escapeHTML: false
+    }))
+    .addDecorator(withFigmaUrl({
+      url: 'https://www.figma.com/file/Ltv4Ku2uwI308h3kRM0hF6DT/Buttons?node-id=1%3A2'
+    }))
+  
+  if (label === 'Components') {
+    stories.addDecorator(centered)
+  }
+
   context
     .keys()
     .forEach(key => {
