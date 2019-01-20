@@ -1,2 +1,2 @@
 # Components
-> all the UI things you can see.
+> The building blocks of the website.

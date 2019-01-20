@@ -1,9 +1,8 @@
-import { configure } from '@storybook/html'
+import { configure } from '@storybook/vue'
 
-// automatically import all files ending in *.stories.js
-const req = require.context('./stories', true, /.stories.js$/)
-function loadStories () {
-  req.keys().forEach(filename => req(filename))
+function loadStories() {
+  // You can require as many stories as you need.
+  require('./stories')
 }
 
 configure(loadStories, module)

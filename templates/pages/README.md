@@ -1,2 +1,2 @@
 # Pages
-> the things we actually share with users!
+> The things we can show the client!

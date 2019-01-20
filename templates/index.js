@@ -1,9 +1,9 @@
-const storybook = require('@storybook/html/standalone')
+const storybook = require('@storybook/vue/standalone')
 
 storybook({
   mode: 'dev',
   port: 3000,
   ci: true,
-  staticDir: [ './dist' ],
-  configDir: './.storybook'
+  staticDir: [ './static' ],
+  configDir: '.storybook'
 })
