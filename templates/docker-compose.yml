@@ -13,7 +13,7 @@ services:
       - ./index.js:/usr/src/index.js
       - ./package.json:/usr/src/package.json
       - ./package-lock.json:/usr/src/package-lock.json
-      - ../assets/scripts:/usr/src/scripts
+      - ../assets/scripts:/usr/assets/scripts
       - dist:/usr/src/static
     command: [ 'npm', 'run', 'docker' ]
     ports:

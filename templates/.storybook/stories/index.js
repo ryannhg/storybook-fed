@@ -4,7 +4,7 @@ import { withKnobsOptions } from '@storybook/addon-knobs'
 import withFigmaUrl from 'storybook-addon-figma'
 import centered from '@storybook/addon-centered'
 
-Vue.use(require('../../scripts/main.js').default)
+Vue.use(require('../../../assets/scripts/main.js'))
 
 try {
   require('../../static/main.css')
