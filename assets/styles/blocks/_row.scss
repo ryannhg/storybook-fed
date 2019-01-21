@@ -1,10 +1,5 @@
 .row {
   display: flex;
-  &__item {
-    &:last-child {
-      margin-right: 0;
-    }
-  }
   &--none {
     .row__item {
       margin-right: 0;
@@ -23,6 +18,11 @@
   &--large {
     .row__item {
       margin-right: 3rem;
+    }
+  }
+  &__item {
+    &:last-child {
+      margin-right: 0;
     }
   }
 }

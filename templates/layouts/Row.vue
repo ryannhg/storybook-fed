@@ -1,14 +1,6 @@
 <template>
   <div class="row" :class="rowClass">
-    <div class="row__item">
-      <div v-if="component" :is="component"></div>
-      <div v-else :style="emptyElement"></div>
-    </div>
-    <div class="row__item">
-      <div v-if="component" :is="component"></div>
-      <div v-else :style="emptyElement"></div>
-    </div>
-    <div class="row__item">
+    <div class="row__item" v-for="(_, i) in items" :key="i">
       <div v-if="component" :is="component"></div>
       <div v-else :style="emptyElement"></div>
     </div>
@@ -16,7 +8,7 @@
 </template>
 
 <script>
-import { select } from '@storybook/addon-knobs'
+import { number, select } from '@storybook/addon-knobs'
 import Button from '../components/Button'
 
 const components = {
@@ -33,8 +25,11 @@ const spacings = {
 
 export default {
   data: _ => ({
-    spacing: select('Spacing', Object.keys(spacings), 'Small'),
     componentName: select('Component', Object.keys(components), 'Empty'),
+    numberOfItems: number('Item Count', 3,
+      { range: true, min: 1, max: 5, step: 1 }
+    ),
+    spacing: select('Spacing', Object.keys(spacings), 'Small'),
   }),
   computed: {
     component () {
@@ -42,6 +37,9 @@ export default {
     },
     rowClass () {
       return spacings[this.spacing]
+    },
+    items () {
+      return [ ...Array(this.numberOfItems) ]
     },
     emptyElement () {
       return {
