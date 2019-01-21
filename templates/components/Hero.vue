@@ -15,6 +15,9 @@ import Button from './Button.vue'
 import { text } from '@storybook/addon-knobs'
 
 export default {
+  storybook: {
+    centered: false
+  },
   components: {
     Button
   },

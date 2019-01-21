@@ -25,7 +25,7 @@ const init = ({ label, context }) => {
       url: 'https://www.figma.com/file/Ltv4Ku2uwI308h3kRM0hF6DT/Buttons?node-id=1%3A2'
     }))
   
-  if (label === 'Components') {
+  if (label === 'Components' || label === 'Layouts') {
     stories.addDecorator(centered)
   }
 

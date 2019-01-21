@@ -1,0 +1,28 @@
+.row {
+  display: flex;
+  &__item {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &--none {
+    .row__item {
+      margin-right: 0;
+    }
+  }
+  &--small {
+    .row__item {
+      margin-right: 1rem;
+    }
+  }
+  &--medium {
+    .row__item {
+      margin-right: 2rem;
+    }
+  }
+  &--large {
+    .row__item {
+      margin-right: 3rem;
+    }
+  }
+}
