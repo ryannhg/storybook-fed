@@ -3,8 +3,8 @@
     <div class="container">
       <h1 class="hero__title" v-text="title"></h1>
       <h2 v-if="subtitle" class="hero__subtitle" v-text="subtitle"></h2>
-      <div class="hero__controls">
-        <Button/>
+      <div v-if="ctaLabel" class="hero__controls">
+        <Button :label="ctaLabel"/>
       </div>
     </div>
   </section>
@@ -21,10 +21,26 @@ export default {
   components: {
     Button
   },
-  data: _ => ({
-    title: text('Title', 'Lorem ipsum'),
-    subtitle: text('Subtitle', 'Dolor sit a beep-boop')
-  }),
+  props: {
+    title: {
+      type: String,
+      default: _ => {
+        return text('Title', 'Lorem ipsum')
+      }
+    },
+    subtitle: {
+      type: String,
+      default: _ => {
+        return text('Subtitle', 'Dolor sit a beep-boop')
+      }
+    },
+    ctaLabel: {
+      type: String,
+      default: _ => {
+        return text('CTA Label', 'Read more')
+      }
+    },
+  },
   computed: {
     heroStyle () {
       return {

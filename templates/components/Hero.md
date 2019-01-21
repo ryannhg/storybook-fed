@@ -1,9 +1,16 @@
 # Hero
 These are notes about the hero.
 
-### Props
+### Inputs
 
-- `title` : required
+- `title : String`
 
-- `subtitle` : optional
+- `subtitle : String` (optional)
 
+- `ctaLabel : String` (optional)
+
+### Details
+
+If the `subtitle` is empty, the subtitle should be blank.
+
+If the `ctaLabel` is blank, the CTA row should not appear or affect the layout.

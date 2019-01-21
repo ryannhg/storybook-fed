@@ -6,8 +6,13 @@
 import { text } from '@storybook/addon-knobs'
 
 export default {
-  data: _ => ({
-    label: text('Label', 'Read more')
-  })
+  props: {
+    label: {
+      type: String,
+      default: _ => {
+        return text('Label', 'Read more')
+      }
+    }
+  }
 }
 </script>

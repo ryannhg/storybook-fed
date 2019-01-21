@@ -1,23 +1,33 @@
 .row {
   display: flex;
+  flex-wrap: wrap;
   &--none {
     .row__item {
       margin-right: 0;
     }
   }
   &--small {
+    $spacing: 1rem;
+    margin-bottom: -$spacing;
     .row__item {
-      margin-right: 1rem;
+      margin-bottom: $spacing;
+      margin-right: $spacing;
     }
   }
   &--medium {
+    $spacing: 2rem;
+    margin-bottom: -$spacing;
     .row__item {
-      margin-right: 2rem;
+      margin-bottom: $spacing;
+      margin-right: $spacing;
     }
   }
   &--large {
+    $spacing: 3rem;
+    margin-bottom: -$spacing;
     .row__item {
-      margin-right: 3rem;
+      margin-bottom: $spacing;
+      margin-right: $spacing;
     }
   }
   &__item {
