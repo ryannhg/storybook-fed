@@ -2,6 +2,6 @@
 
 Things that are laid out side by side.
 
-### Content to Big?
+### Content too big?
 
 Row items should __wrap__ and __left align__.
